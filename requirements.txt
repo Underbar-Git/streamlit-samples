@@ -1,2 +1,3 @@
 pyzbar
 libzbar0
+libzbar-cffi
