@@ -28,7 +28,7 @@ chart_data = pd.DataFrame(
 
 st.line_chart(chart_data)
 
-redirect_button("https://toss.me/underbars","여기를 눌러 송금을..")
+
 
 
 st.markdown("# 바코드 읽기?")
@@ -38,3 +38,7 @@ if pic:
     import pyzbar.pyzbar as pyzbar
     decoded = pyzbar.decode(pic)
     st.write(decoded)
+
+
+
+redirect_button("https://toss.me/underbars","여기를 눌러 송금을..")
