@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import pyzbar.pyzbar as pyzbar
 
 def redirect_button(url: str, text: str= None, color="#FD504D"):
     st.markdown(
@@ -29,14 +28,6 @@ chart_data = pd.DataFrame(
 
 st.line_chart(chart_data)
 
-
-
-
-st.markdown("# 바코드 읽기?")
-pic = st.camera_input("바코드를 촬영하시죠.")
-if pic:
-    decoded = pyzbar.decode(pic)
-    st.write(decoded)
 
 
 
