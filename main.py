@@ -29,3 +29,12 @@ chart_data = pd.DataFrame(
 st.line_chart(chart_data)
 
 redirect_button("https://toss.me/underbars","여기를 눌러 송금을..")
+
+
+st.markdown("# 바코드 읽기?")
+pic = st.camera_input("바코드를 촬영하시죠.")
+if pic:
+    
+    import pyzbar.pyzbar as pyzbar
+    decoded = pyzbar.decode(pic)
+    st.write(decoded)
