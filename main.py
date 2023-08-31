@@ -11,4 +11,5 @@ chart_data = pd.DataFrame(
 st.line_chart(chart_data)
 
 if st.button('토스 후원'):
-    webbrowser.open_new_tab('https://toss.me/underbars')
+    link = '[Toss](https://toss.me/underbars)'
+    st.markdown(link, unsafe_allow_html=True)
