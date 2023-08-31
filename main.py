@@ -20,7 +20,7 @@ def redirect_button(url: str, text: str= None, color="#FD504D"):
     unsafe_allow_html=True
     )
     
-st.title('Pandas를 이용한 간단한 차트 구현 예')
+st.title('Pandas 차트 구현 예')
 
 chart_data = pd.DataFrame(
     np.random.randn(20, 3),
