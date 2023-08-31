@@ -9,3 +9,6 @@ chart_data = pd.DataFrame(
     columns=['a', 'b', 'c'])
 
 st.line_chart(chart_data)
+
+if st.button('토스 후원'):
+    webbrowser.open_new_tab('https://toss.me/underbars')
