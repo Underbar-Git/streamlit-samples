@@ -2,6 +2,24 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
+def redirect_button(url: str, text: str= None, color="#FD504D"):
+    st.markdown(
+    f"""
+    <a href="{url}" target="_self">
+        <div style="
+            display: inline-block;
+            padding: 0.5em 1em;
+            color: #FFFFFF;
+            background-color: {color};
+            border-radius: 3px;
+            text-decoration: none;">
+            {text}
+        </div>
+    </a>
+    """,
+    unsafe_allow_html=True
+    )
+    
 st.title('매출을 여기서 췌-ㅋ')
 
 chart_data = pd.DataFrame(
@@ -10,6 +28,4 @@ chart_data = pd.DataFrame(
 
 st.line_chart(chart_data)
 
-
-link = '[Toss](https://toss.me/underbars)'
-st.markdown(link, unsafe_allow_html=True)
+redirect_button("https://toss.me/underbars","여기를 눌러 송금을..")
